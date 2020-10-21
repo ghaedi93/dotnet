@@ -18,6 +18,7 @@ namespace CmdApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc(option=>option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            newclass.Test(); 
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,6 +36,11 @@ namespace CmdApi
             //     endpoints.MapGet("/", async context =>
             //     {
             //         await context.Response.WriteAsync("Hello World!");
+            //     });
+
+            //     endpoints.MapGet("/api/commands", async context =>
+            //     {
+            //         await context.Response.WriteAsync("Hello javad");
             //     });
             // });
             app.UseMvc(); 
